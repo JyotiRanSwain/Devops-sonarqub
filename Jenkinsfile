@@ -9,7 +9,6 @@ pipeline {
             steps {
 		dir('addressbook')
 		    {
-		sh 'pwd'
                 sh 'mvn clean package'
 		    }
             }    
@@ -22,7 +21,7 @@ pipeline {
 		    sh "mvn clean verify sonar:sonar -Dsonar.projectKey=test -Dsonar.projectName='test'"
     }
 		    }
-	    }
 }
- }
+}
+}
 }
